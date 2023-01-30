@@ -1,0 +1,222 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-decoration: none;
+    font-family: 'Poppins' , sans-serif;
+}
+
+body {
+    height: 100vh;
+    background-color: black;
+    color: white;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+/* navbar */
+
+nav {
+    display: flex;
+    width: 100%;
+    height: 80px;
+    justify-content: space-around;
+    align-items: center;
+    color: #fff;
+
+      text-shadow:  0 0 7px #fff, 
+               0 0 10px #fff, 
+               0 0 42px rgb(0, 68, 255),   
+               0 0 77px rgb(233, 202, 0), 
+               0 0 100px rgb(255, 0, 0)
+               ;
+               margin-bottom: 25px;
+}
+
+.nav-links ul li a{
+    margin: 0 25px;
+    color: rgb(255, 255, 255);
+}
+
+.nav-links ul li a button {
+    height: 35px;
+    width: 55px;
+    border-radius: 10px;
+    border: 2px white solid;
+    background: none;
+    color: #fff;
+    text-shadow:  0 0 7px #fff, 
+             0 0 10px #fff, 
+             0 0 42px rgb(0, 68, 255),   
+             0 0 77px rgb(233, 202, 0), 
+             0 0 100px rgb(255, 0, 0)
+}
+
+/* menu hamburger */
+
+.menu {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: absolute;
+    z-index: 3;
+    display: none;
+  }
+  .line {
+    fill: none;
+    stroke: rgb(255, 255, 255);
+    stroke-width: 6;
+    transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+      stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .line1 {
+    stroke-dasharray: 60 207;
+    stroke-width: 6;
+  }
+  .line2 {
+    stroke-dasharray: 60 60;
+    stroke-width: 6;
+  }
+  .line3 {
+    stroke-dasharray: 60 207;
+    stroke-width: 6;
+  }
+  .opened .line1 {
+    stroke-dasharray: 90 207;
+    stroke-dashoffset: -134;
+    stroke-width: 6;
+  }
+  .opened .line2 {
+    stroke-dasharray: 1 60;
+    stroke-dashoffset: -30;
+    stroke-width: 6;
+  }
+  .opened .line3 {
+    stroke-dasharray: 90 207;
+    stroke-dashoffset: -134;
+    stroke-width: 6;
+  }
+  
+
+/* end of the navbar */
+
+.container {
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    padding-top: 150px;
+}
+
+.left , .right {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* left side */ 
+
+.left h1 {
+    margin: 50px 0;
+    background: linear-gradient(to right, #ffffff, rgb(0, 132, 255)); 
+          text-shadow:  0 0 7px #fff, 
+               0 0 10px #fff, 
+               0 0 42px rgb(0, 68, 255),   
+               0 0 77px rgb(0, 47, 255), 
+               0 0 100px rgb(0, 123, 255);
+    background-clip:text;
+    -webkit-background-clip:text;
+    color:transparent;
+}
+
+/* keys points */ 
+
+.keys-points {
+    width: 100%;
+    height: 80vh;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    margin-top: 50px;
+} 
+
+.keys-points .content {
+    margin-top: 20px;
+}
+
+.content img {
+    height: 50px;
+    width: 50px;
+}
+
+.left p {
+    width: 80%;
+}
+
+
+
+/* right side */
+
+.right {
+    text-align: start;
+}
+
+.right img {
+    width: 100%;
+    height: 100%;
+}
+
+
+
+@media screen and (max-width:1480px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+/* responsie navbar */
+
+@media screen and (max-width:1000px) {
+    nav {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        height: 100vh;
+        background-color: rgb(23, 23, 23);
+        margin-left: -100%;
+        z-index: 1;
+        transition: all 0.5s;
+    }
+
+    .nav-links ul li{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .nav-links ul li a {
+        margin: 30px 0;
+    }
+
+    .mobile-menu {
+        margin-left: 0;
+    }
+
+    .menu {
+        display: flex;
+    }
+
+}
+
